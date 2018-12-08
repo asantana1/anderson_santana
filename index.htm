@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<title>Apocalypse Technologies</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<style>
+	.center {
+	 margin: auto;
+	html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+	img {
+    		display: block;
+    		margin-left: auto;
+    		margin-right: auto;
+	}
+	
+</style>
+
+
+<!-- Side Navigation or Main Menu-->
+<nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none" id="mySidebar">
+  <h1 class="w3-xxxlarge w3-text-theme">Main Menu</h1>
+  <button class="w3-bar-item w3-button" onclick="w3_close()">Close <i class="fa fa-remove"></i></button>
+  <a href="resume.htm" class="w3-bar-item w3-button">My resume</a>
+  <a href="scenery.htm" class="w3-bar-item w3-button">Beautiful scenery</a>
+  <a href="underconstruction.htm" class="w3-bar-item w3-button">Blackjack</a>
+  
+  </nav>
+
+<!-- Header -->
+<header class="w3-container w3-theme w3-padding" id="myHeader">
+  <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i> 
+  <div class="w3-center">
+  <h4><img src="images/Apocalypse.png" alt = "Apocalypse Technologies Logo"></h4>
+  <h1 class="w3-xxxlarge w3-animate-bottom">Apocalypse Technologies</h1>
+    <div class="w3-padding-32">
+      <button class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">THE ALPHA AND OMEGA OF SOFTWARE CREATION</button>
+    </div>
+  </div>
+</header>
+
+<!-- Modal -->
+<div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-top">
+      <header class="w3-container w3-theme-l1"> 
+        <span onclick="document.getElementById('id01').style.display='none'"
+        class="w3-button w3-display-topright">&times;</span>
+        <h4>Welcome to my fictional company website! It is a portal to my resume, a photography blog,<br>
+         as well as some other interests of mine. 
+         It is always changing so stay tuned!</h4>
+      </header>
+      <div class="w3-padding">
+        <p>I am a recent computer science graduate and founder of Apocalypse Technologies.</p>
+      </div>
+    </div>
+</div>
+
+<hr>
+<div class="w3-row-padding w3-center w3-margin-top">
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:460px">
+  <h3>Java</h3><br>
+  
+  <img src="images/java.png" style="width:35%" alt = "Java Logo">
+
+  <p>Object oriented programming language</p>
+  <p>Automatic garbage collection</p>
+  <p>Widely used today</p>
+  </div>
+</div>
+
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:460px">
+  <h3>Windows</h3><br>
+  <i class="fa fa-windows w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+  <p>Widely used Operating System</p>
+  <p>Proprietary Software</p>
+  <p>Easy to use</p>
+  </div>
+</div>
+
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:460px">
+  <h3>Linux</h3><br>
+  <i class="fa fa-linux w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+  <p>Family of Operating Systems</p>
+  <p>Free and open-source</p>
+  <p>Community Support</p>
+  </div>
+</div>
+</div>
+<br>
+
+<hr>
+<h2 class="w3-center">Languages</h2>
+<div class= "w3-center">
+<div class="w3-bar w3-theme center">
+  <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openLanguage(event,'Portuguese')"><img src="images/portugal.png" alt = "Portuguese"></button>
+  <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openLanguage(event,'English')"><img src="images/greatbritain.png" alt = "English"</button>
+  <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openLanguage(event,'Spanish')"><img src="images/spain.png" alt = "Spanish"</button>
+</div>
+
+<div id="Portuguese" class="w3-container language w3-animate-opacity">
+  <h2>Portuguese</h2>
+  <p>Portuguese is my first language.</p>
+  <p>It is the official language of Portugal, Brazil, and many African nations, as well as East Timor and Macau in Asia.</p>
+</div>
+
+<div id="English" class="w3-container language w3-animate-opacity">
+  <h2>English</h2>
+  <p>English is my second language.</p> 
+  <p>English is widely spoken throughout the world and it is interestingly spoken by more people who have learned it as a second language than 
+  there are native speakers. </p>
+</div>
+
+<div id="Spanish" class="w3-container language w3-animate-opacity">
+  <h2>Spanish</h2>
+  <p>Spanish is my third language.</p>
+  <p>Spanish is also widely spoken throughout the world and it is interestingly spoken in most of South America except Brazil, Suriname, Guyana, and French Guiana.</p>
+</div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-theme-dark w3-padding-16">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  <div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-theme-light w3-padding">Go To Top</span>&nbsp;   
+    <a class="w3-text-white" href="#myHeader"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+
+<!-- Script for Main Menu, Tabs and Progress bars -->
+<script>
+// Side navigation Main Menu
+function w3_open() {
+    var x = document.getElementById("mySidebar");
+    x.style.width = "100%";
+    x.style.fontSize = "40px";
+    x.style.paddingTop = "10%";
+    x.style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+
+// Tabs
+function openLanguage(evt, languageName) {
+  var i;
+  var x = document.getElementsByClassName("language");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  var activebtn = document.getElementsByClassName("testbtn");
+  for (i = 0; i < x.length; i++) {
+      activebtn[i].className = activebtn[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(languageName).style.display = "block";
+  evt.currentTarget.className += " w3-dark-grey";
+}
+
+var mybtn = document.getElementsByClassName("testbtn")[0];
+mybtn.click();
+
+
+// Progress Bars
+function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 5;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width == 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+      elem.innerHTML = width * 1  + '%';
+    }
+  }
+}
+</script>
+
+</body>
+</html>

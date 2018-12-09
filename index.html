@@ -4,28 +4,67 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<style>
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
 
-<!-- Side Navigation or Main Menu-->
-<nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none" id="mySidebar">
-  <h1 class="w3-xxxlarge w3-text-theme">Main Menu</h1>
-  <button class="w3-bar-item w3-button" onclick="w3_close()">Close <i class="fa fa-remove"></i></button>
-  <a href="resume.htm" class="w3-bar-item w3-button">My resume</a>
-  <a href="scenery.htm" class="w3-bar-item w3-button">Beautiful scenery</a>
-  <a href="underconstruction.htm" class="w3-bar-item w3-button">Blackjack</a>
-  
-  </nav>
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+
 
 <!-- Header -->
 <header class="w3-container w3-theme w3-padding" id="myHeader">
-  <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i> 
-  <div class="w3-center">
-  <h4><img src="images/apocalypse.png" alt = "Apocalypse Technologies Logo"></h4>
-  <h1 class="w3-xxxlarge w3-animate-bottom">Apocalypse Technologies</h1>
+	<!-- Side Navigation -->
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="resume.htm" class="w3-bar-item w3-button">My resume</a>
+  <a href="scenery.htm" class="w3-bar-item w3-button">Photos</a>
+  <a href="underconstruction.htm" class="w3-bar-item w3-button">Blackjack</a>
+  </div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+<div class="w3-center">
+  <h4><img src="images/Apocalypse.png" alt = "Apocalypse Technologies Logo"></h4>
+  
     <div class="w3-padding-32">
-      <button class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">SOFTWARE DEVELOPMENT</button>
+      <button class="w3-btn w3-xlarge w3-dark-gray w3-hover-blue" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">WELCOME</button>
     </div>
   </div>
 </header>
@@ -47,6 +86,8 @@
 </div>
 
 <hr>
+
+<h1 class="w3-xxxlarge w3-center w3-animate-top">My Interests</h1>
 <div class="w3-row-padding w3-center w3-margin-top">
 <div class="w3-third">
   <div class="w3-card w3-container" style="min-height:460px">
@@ -121,18 +162,14 @@
   </div>
 </footer>
 
-<!-- Script for Main Menu, Tabs and Progress bars -->
 <script>
-// Side navigation Main Menu
-function w3_open() {
-    var x = document.getElementById("mySidebar");
-    x.style.width = "100%";
-    x.style.fontSize = "40px";
-    x.style.paddingTop = "10%";
-    x.style.display = "block";
+// Side navigation functions
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
 }
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
 }
 
 // Tabs
@@ -144,32 +181,15 @@ function openLanguage(evt, languageName) {
   }
   var activebtn = document.getElementsByClassName("testbtn");
   for (i = 0; i < x.length; i++) {
-      activebtn[i].className = activebtn[i].className.replace(" w3-dark-grey", "");
+      activebtn[i].className = activebtn[i].className.replace(" w3-blue", "");
   }
   document.getElementById(languageName).style.display = "block";
-  evt.currentTarget.className += " w3-dark-grey";
+  evt.currentTarget.className += " w3-blue";
 }
 
 var mybtn = document.getElementsByClassName("testbtn")[0];
 mybtn.click();
 
-
-// Progress Bars
-function move() {
-  var elem = document.getElementById("myBar");   
-  var width = 5;
-  var id = setInterval(frame, 10);
-  function frame() {
-    if (width == 100) {
-      clearInterval(id);
-    } else {
-      width++; 
-      elem.style.width = width + '%'; 
-      elem.innerHTML = width * 1  + '%';
-    }
-  }
-}
 </script>
-
-</body>
-</html>
+     
+</html> 

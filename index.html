@@ -15,7 +15,7 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: rgb(55, 55, 55);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -25,7 +25,7 @@
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: rgb(0,0,0);
     display: block;
     transition: 0.3s;
 }
@@ -50,8 +50,9 @@
 
 
 <!-- Header -->
-<header class="w3-container w3-theme w3-padding" id="myHeader">
-	<!-- Side Navigation -->
+
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="myHeader">
+<!-- Side Navigation -->
   <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="resume.htm" class="w3-bar-item w3-button">My resume</a>
@@ -60,15 +61,12 @@
   </div>
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 
-<div class="w3-center">
-  <h4><img src="images/meteor.jpg" alt = "Apocalypse Technologies Logo"alt=" width="1500" height="800">
-></h4>
-  
-    <div class="w3-padding-32">
+  <img class="w3-image" src="images/meteor.jpg" alt="Apocalypse Technologies" width="1500" height="800">
+  <div class= "w3-center">
       <button class="w3-btn w3-xlarge w3-dark-gray w3-hover-blue" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">APOCALYPSE TECHNOLOGIES</button>
-    </div>
   </div>
 </header>
+
 
 <!-- Modal -->
 <div id="id01" class="w3-modal">
@@ -194,3 +192,4 @@ mybtn.click();
 </script>
      
 </html> 
+

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<title>Apocalypse Technologies</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+	background-color: #f1f1f1;
+	overflow-x: hidden;
+    transition: 0.5s;   
+    padding-top: 60px; 
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+	text-decoration: none;
+    font-size: 25px;
+    color: blue;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: rgb(255,255,255);   
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 24px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+
+<!-- Header -->
+
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="myHeader">
+<!-- Side Navigation -->
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="resume.htm" class="w3-bar-item w3-button">My resume</a>
+  <a href="scenery.htm" class="w3-bar-item w3-button">Photos</a>
+  <a href="underconstruction.htm" class="w3-bar-item w3-button">Blackjack</a>
+  </div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+  <img class="w3-image" src="images/meteor.jpg" alt="Apocalypse Technologies" width="1500" height="800">
+  <div class= "w3-center">
+      <button class="w3-btn w3-xlarge w3-dark-gray w3-hover-blue" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">APOCALYPSE TECHNOLOGIES</button>
+  </div>
+</header>
+
+
+<!-- Modal -->
+<div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-top">
+      <header class="w3-container w3-theme-l1"> 
+        <span onclick="document.getElementById('id01').style.display='none'"
+        class="w3-button w3-display-topright">&times;</span>
+        <h4>Welcome to my fictional company website! It is a portal to my resume, a photography blog,<br>
+         as well as some other interests of mine. 
+         It is always changing so stay tuned!</h4>
+      </header>
+      <div class="w3-padding">
+        <p>I am a recent computer science graduate and founder of Apocalypse Technologies.</p>
+      </div>
+    </div>
+</div>
+
+<hr>
+
+<h1 class="w3-xxxlarge w3-center w3-animate-top">My Interests</h1>
+<div class="w3-row-padding w3-center w3-margin-top">
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:460px">
+  <h3>Java</h3><br>
+  
+  <img src="images/java.png" style="width:35%" alt = "Java Logo">
+
+  <p>Object oriented programming language</p>
+  <p>Automatic garbage collection</p>
+  <p>Widely used today</p>
+  </div>
+</div>
+
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:460px">
+  <h3>Windows</h3><br>
+  <i class="fa fa-windows w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+  <p>Widely used Operating System</p>
+  <p>Proprietary Software</p>
+  <p>Easy to use</p>
+  </div>
+</div>
+
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:460px">
+  <h3>Linux</h3><br>
+  <i class="fa fa-linux w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+  <p>Family of Operating Systems</p>
+  <p>Free and open-source</p>
+  <p>Community Support</p>
+  </div>
+</div>
+</div>
+<br>
+
+<hr>
+<h2 class="w3-center">Languages</h2>
+<div class= "w3-center">
+<div class="w3-bar w3-theme center">
+  <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openLanguage(event,'Portuguese')"><img src="images/portugal.png" alt = "Portuguese"></button>
+  <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openLanguage(event,'English')"><img src="images/greatbritain.png" alt = "English"</button>
+  <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openLanguage(event,'Spanish')"><img src="images/spain.png" alt = "Spanish"</button>
+</div>
+
+<div id="Portuguese" class="w3-container language w3-animate-opacity">
+  <h2>Portuguese</h2>
+  <p>Portuguese is my first language.</p>
+  <p>It is the official language of Portugal, Brazil, and many African nations, as well as East Timor and Macau in Asia.</p>
+</div>
+
+<div id="English" class="w3-container language w3-animate-opacity">
+  <h2>English</h2>
+  <p>English is my second language.</p> 
+  <p>English is widely spoken throughout the world and it is interestingly spoken by more people who have learned it as a second language than 
+  there are native speakers. </p>
+</div>
+
+<div id="Spanish" class="w3-container language w3-animate-opacity">
+  <h2>Spanish</h2>
+  <p>Spanish is my third language.</p>
+  <p>Spanish is also widely spoken throughout the world and it is interestingly spoken in most of South America except Brazil, Suriname, Guyana, and French Guiana.</p>
+</div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-theme-dark w3-padding-16">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  <div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-theme-light w3-padding">Go To Top</span>&nbsp;   
+    <a class="w3-text-white" href="#myHeader"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+
+<script>
+// Side navigation functions
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+// Tabs
+function openLanguage(evt, languageName) {
+  var i;
+  var x = document.getElementsByClassName("language");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  var activebtn = document.getElementsByClassName("testbtn");
+  for (i = 0; i < x.length; i++) {
+      activebtn[i].className = activebtn[i].className.replace(" w3-blue", "");
+  }
+  document.getElementById(languageName).style.display = "block";
+  evt.currentTarget.className += " w3-blue";
+}
+
+var mybtn = document.getElementsByClassName("testbtn")[0];
+mybtn.click();
+
+</script>
+     
+</html> 

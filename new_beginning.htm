@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+	<html>
+		<title>The New Beginning</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+
+<!-- Animation for scrolling menu items-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url('images/snow.jpg');
+  min-height: 100%;
+}
+
+/* Second image (Messages) */
+.bgimg-2 {
+  background-image: url("images/ocean.jpg");
+  min-height: 400px;
+}
+
+/* Third image (More Info) */
+.bgimg-3 {
+  background-image: url("images/cloud.jpg");
+  min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+</style>
+
+
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-dove"></i> ABOUT</a>
+    <a href="#prayers" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-praying-hands"></i> PRAYERS</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-pray"></i> CONTACT</a>
+ 
+    </a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+    <a href="#prayers" class="w3-bar-item w3-button" onclick="toggleFunction()">PRAYERS</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Uplifting Messages Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">UPLIFTING MESSAGES</span>
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h1 class="w3-center">ABOUT</h1>
+  <h3><p class="w3-center"><em>This site is a blog of inspirational messages</em></p></h3>
+  <h5><p>We have created a religious website/blog. The purpose of this website is to show many inspirational messages sent between friends, during special events, as well as prayer requests, etc. It will be a portal
+     for anything spiritual and religious for me and my close friends.
+  </p></h5>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <p><b><i class="fa fa-user-friends w3-margin-right"></i>Anderson and Dwight</b></p><br>
+      <img src="images/friends.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="friends" width="500" height="333">
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+      <h4><p>Welcome to our website The New Beginning. I am Anderson and I am happy to show all of you inspirational messages written by my good friend Dwight. I am thankful for him and his friendship all these years.
+	         We have known each other for a very long time, and he has helped me greatly with his wisdom, patience, and his ability to say the right things at the right times. He is a father figure to me.</p></h4>
+    </div>
+  </div>
+</div>
+
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">PRAYERS AND BIBLE VERSES</span>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64" id="prayers">
+  <h1 class="w3-center">PRAYERS AND BIBLE VERSES</h1>
+  <p class="w3-center"><em>Here are some prayers and bible verses. <br> Click on each picture for a related prayer/bible verse. </em></p><br>
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src="images/shepherd.jpg" style="width:100%" height="137.25" onclick="onClick(this)" class="w3-hover-opacity" alt="The Lord is good all the time. John 10:11 New International Version (NIV)
+				11 “I am the good shepherd. The good shepherd lays down his life for the sheep.”">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="images/creation.jpg" style="width:100%" height="137.25" onclick="onClick(this)" class="w3-hover-opacity" alt="The Earth is God's and Everything in it. There is nothing too hard for God. Trust and Obey.
+		Good Morning in Jesus Name. I LOVE YOU. Revelation 4:11 New International Version (NIV) 11 “You are worthy, our Lord and God, to receive glory and honor and power, for you created all things, 
+		and by your will they were created and have their being.”">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="images/prayer.jpg" style="width:100%" height="137.25" onclick="onClick(this)" class="w3-hover-opacity" alt=" PRAY ....... Like Nehemiah OBEY ....... Like Daniel LEAD ........ Like Moses BUILD ....... Like Noah 
+	  FIGHT ....... Like David SERVE ....... Like Martha BELIEVE ..... Like Mary EDUCATE ... Like Paul LOVE .......... Like JESUS 
+	  Colossians 4:2 New International Version (NIV) 2 “Devote yourselves to prayer, being watchful and thankful.”">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="images/fight.jpg" style="width:100%" height="137.25" onclick="onClick(this)" class="w3-hover-opacity" alt="Exodus 14:14 New International Version (NIV) 14 “The Lord will fight for you; you need only to be still.”">
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-center w3-section">
+    <div class="w3-col m3">
+      <img src="images/forever.jpg" style="width:100%" height="137.25" onclick="onClick(this)" class="w3-hover-opacity" alt="Ephesians‬ ‭3:21‬ ‭New International Version (NIV) 21 “to him be glory in the church and in Christ Jesus throughout all generations, for ever and ever! Amen.”
+‭‭">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="images/suffering.jpg" style="width:100%" height="137.25" onclick="onClick(this)" class="w3-hover-opacity" alt="Praise God for this new day. With every part of my body I will praise God. Lord I thank for the favors you grant me. 
+	  Lord when people see me, May they see you. Father, provide, heal and deliver in Jesus name. Romans 8:18 New International Version (NIV) 18 “I consider that our present sufferings are not worth comparing with the glory 
+	  that will be revealed in us.”">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="images/command.jpg" style="width:100%" height="137.25" onclick="onClick(this)" class="w3-hover-opacity" alt="Glory to God. I greet you with the Love of Jesus Christ. Cloth yourself with the full armor of God. 
+	  Be Blessed in your going out and your coming in. John 15:12 New International Version (NIV) 12 “My command is this: Love each other as I have loved you.”">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="images/heaven.jpg" style="width:100%" height="137.25" onclick="onClick(this)" class="w3-hover-opacity" alt="Praise the Lord. Greetings to you with the Love of Jesus. May you receive what God has for you. 
+		The Best is what he give to us. Not what we want but what God has. The Best. John 5:24 New International Version (NIV) 24 “Very truly I tell you, whoever hears my word and believes him who sent 
+		me has eternal life and will not be judged but has crossed over from death to life.”">
+    </div>
+  </div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Image"><i class="fa fa-times"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Third Parallax Image with Contact -->
+<div class="bgimg-3 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+  </div>
+</div>
+
+<!-- Container (Message Section) -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+  <h3 class="w3-center">CONTACT</h3>
+  
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m4 w3-container">
+      <img src="images/massachusetts.jpg" class="w3-image w3-round" style="width:100%">
+    </div>
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker-alt fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Massachusetts, US<br>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 353535<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@mail.com<br>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// Animates menu items when clicked
+$(document).on("click","a",function(e){
+        e.preventDefault();
+        var id = $(this).attr("href"),
+            topSpace = 0;
+    //alert(id);
+        $('html, body').animate({
+          scrollTop: $(id).offset().top - topSpace
+        }, 800);
+    });
+</script>
+
+</body>
+</html>

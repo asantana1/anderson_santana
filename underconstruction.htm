@@ -7,122 +7,145 @@
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
 
-<div class="w3-container">
+<div class="w3-center">
 <i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
     <span class="sr-only">Under construction...</span>
 	
 	<div class= "w3-center">
 		<h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>BLACKJACK</b></span></h1>
 	</div>
-
-<div class="game">
-		
-
-    <div id="players" class="players">
-    </div>
-
-    <div class="clear"></div>
-</div>
-
+  
 <head>
 	<style>
 	
-	.responsive 
+	.card
 	{
-		width: 100%;
-		height: auto;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		display: block;
+		margin: auto;
+		width: 10%;
 	}
+	
+	@media screen and (min-width: 480px) {
+		.card 	{	
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		display: block;
+		margin: auto;
+		width: 6%;		}
+	}
+
 	.table
 	{
 		position: relative;
+		width: 60%;
 		top: 0;
 		left: 0;
 	}
-	<!-- .card
-	{
-		position: absolute;
-		top: 225px;
-		left: 550px;
-	}
-	.card2
+	
+	<!--.card2
 	{
 		position: absolute;
 		top: 225px;
 		left: 570px;
 	} -->
 	</style>
+	
 </head>
 
 
 <body>
 
 <script>
+	  
+	var suits = ["s", "h", "d", "c"];
+	var ranks = ["2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q", "K", "A"];
+	var deck = new Array();
 
-var suits = ["Spades", "Hearts", "Diamonds", "Clubs"];
-var values = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
-var deck = new Array();
-
-    function createDeck()
-    {
-        deck = new Array();
-        for (var i = 0 ; i < values.length; i++)
-        {
-            for(var x = 0; x < suits.length; x++)
-            {
-                var weight = parseInt(values[i]);
-                if (values[i] == "J" || values[i] == "Q" || values[i] == "K")
-                    weight = 10;
-                if (values[i] == "A")
-                    weight = 11;
-                var card = { Value: values[i], Suit: suits[x], Weight: weight };
-                deck.push(card);
-            }
-        }
-    }
-	
-	function shuffle()
-	{
-        // for 1000 turns
-        // switch the values of two random cards
-        for (var i = 0; i < 1000; i++)
-        {
-            var location1 = Math.floor((Math.random() * deck.length));
-            var location2 = Math.floor((Math.random() * deck.length));
-            var tmp = deck[location1];
-
-            deck[location1] = deck[location2];
-            deck[location2] = tmp;
+	function createDeck(){	
+		for (var i = 0 ; i < ranks.length; i++)
+		{
+			for(var x = 0; x < suits.length; x++)
+			{
+				var card = "images/" + ranks[i] + suits[x] + ".gif";
+				deck.push(card);
+			}
 		}
 	}
-	
+
+	// Fisher–Yates shuffle with no bias(I hope!)
+	function shuffle(){
+		for (var i = deck.length - 1; i > 0; i--)
+		{
+			var j = Math.floor(Math.random() * i);
+			var temp = deck[i];
+
+			deck[i] = deck[j];
+			deck[j] = temp;
+		}
+	}
+
+	function showCard() {
+		if(deck.length <= 0){
+			alert("Your deck is out of cards!");
+		let confirmAction = confirm("Would you like to play again?");
+			if (confirmAction) {
+				window.location.reload();
+			} else {
+			alert("Game Over!");
+			//window.close();
+			}
+		}
+		else
+		{	
+		var image = deck.pop();
+			document.getElementById('myImage').src = image;
+			console.log(image);
+		}
+	}
+
 	function dealCard()
-    {
-        var card = deck.pop();
-        updatePoints();
+	{
+		var card = deck.pop();
+		updatePoints();
 		updateDeck();
 		return card;
-    }
-        
-    function startblackjack()
-    {
-            document.getElementById('btnStart').value = 'Deal';
-            // deal 2 cards to Dealer and Player
-            createDeck();
-            shuffle();
-            dealHands();
-            document.getElementById('player_' + currentPlayer).classList.add('active');
-    }
+	}
+		
+	function startGame()
+	{
+			//document.getElementById('btnStart').value = 'Deal';
+			// deal 2 cards to Dealer and Player
+			createDeck();
+			shuffle();
+			showCard();
+			//dealHands();
+			//document.getElementById('player_' + currentPlayer).classList.add('active');
+	}
+	
+	startGame();
 	
 </script>
 	
+
 	<div class= "w3-center">
 		
-		<img src="images/table.png" class="responsive table" />
+		<img src="images/table.png" class="table" />
 		
-	</div>	
+		<img id="myImage" src="images/blue_background.gif" class ="card">	
+		
+	</div>
+
 	<br>
 	<div class= "w3-center">
-		<input type="button" class="btn" value="Deal" onclick="dealCard()" />
+		<input type="button" class="btn" value="Deal" onclick="showCard()" />
 		<input type="button" class="btn" value="Hit" onclick="hit()" />
 		<input type="button" class="btn" value="Stand" onclick="stand()" />
 	</div>

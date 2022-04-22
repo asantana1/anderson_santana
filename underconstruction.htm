@@ -7,47 +7,32 @@
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
 
-	<!-- <div class="w3-center">
-<i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
-    <span class="sr-only">Under construction...</span> </div> -->
-	
-	<!-- <div class= "w3-center">
-		<h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>BLACKJACK</b></span></h1>
-	</div> -->
-  
 <head>
 	<style>
 	
-
-	<!-- .card
+	.card
 	{
 		position: absolute;
 		left: 0px;
 		top: 0px;
 		right: 0px;
-		bottom: 500px;
+		bottom: 0px;
 		display: block;
 		margin: auto;
 		width: 10%;
-	} -->
+	}
 	
-	<!-- @media only screen and (min-device-width: 480px) 
-					   and (max-device-width: 640px) 
-                       and (orientation: landscape) {
-		} -->
-		
  	@media screen and (min-width: 480px){
-		.card 	{	
+		.card	{	
 		position: absolute;
 		left: 0px;
 		top: 0px;
 		right: 0px;
-		bottom: 300px;
+		bottom: 0px;
 		display: block;
 		margin: auto;
 		width: 10%;		}
 		}
-	
 	
 	@media screen and (min-width: 600px){
 		.card 	{	
@@ -55,25 +40,13 @@
 		left: 0px;
 		top: 0px;
 		right: 0px;
-		bottom: 200px;
+		bottom: 0px;
 		display: block;
 		margin: auto;
 		width: 9%;		}
 		}
 		
-		@media screen and (min-width: 720px){
-		.card 	{	
-		position: absolute;
-		left: 0px;
-		top: 0px;
-		right: 0px;
-		bottom: 100px;
-		display: block;
-		margin: auto;
-		width: 8.2%;		}
-		}
-		
-		@media screen and (min-width: 840px){
+	@media screen and (min-width: 720px){
 		.card 	{	
 		position: absolute;
 		left: 0px;
@@ -82,65 +55,462 @@
 		bottom: 0px;
 		display: block;
 		margin: auto;
-		width: 7.4%;		}
+		width: 8.2%;	}
+		}
+		
+	@media screen and (min-width: 840px){
+		.card 	{	
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		display: block;
+		margin: auto;
+		width: 7.4%;	}
 		}
 		
 	@media screen and (min-width: 960px) {
 		.card	{
 		position: absolute;
 		left: 0px;
-		top: 100px;
+		top: 0px;
 		right: 0px;
 		bottom: 0px;
 		display: block;
 		margin: auto;
-		width: 6.6%;		
-			
-		}
+		width: 6.6%;	}
 		}
 		
-		@media screen and (min-width: 1080px) {
+	@media screen and (min-width: 1080px) {
 		.card	{
 		position: absolute;
 		left: 0px;
-		top: 200px;
+		top: 0px;
 		right: 0px;
 		bottom: 0px;
 		display: block;
 		margin: auto;
-		width: 5.8%;		
-			
-		}
+		width: 5.8%;	}
 		}
 		
-		@media screen and (min-width: 1200px) {
+	@media screen and (min-width: 1200px) {
 		.card	{
 		position: absolute;
 		left: 0px;
-		top: 300px;
+		top: 0px;
 		right: 0px;
 		bottom: 0px;
 		display: block;
 		margin: auto;
-		width: 5%;		
-			
+		width: 5%;		}
 		}
-		}
-	
+
 	.table
 	{
 		position: relative;
-		display: block;
 		width: 100%;
 	}
 	
-
-	<!--.card2
-	{
+	/*Mobile first! Display designed buttons on screens of 480px or less */
+	
+	@media screen and (min-width: 480px){
+	.table .btn1 {
 		position: absolute;
-		top: 225px;
-		left: 570px;
-	} -->
+		top: 85%;
+		left: 34%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		background-color: #555;
+		color: white;
+		font-size: 16px;
+		padding: 12px 24px;
+		border: none;
+		cursor: pointer;
+		border-radius: 5px;
+		text-align: center;
+		transition-duration: 0.4s;}
+	}
+
+	@media screen and (min-width: 480px){
+	.table .btn2 {
+		position: absolute;
+		top: 85%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		background-color: #555;
+		color: white;
+		font-size: 16px;
+		padding: 12px 24px;
+		border: none;
+		cursor: pointer;
+		border-radius: 5px;
+		text-align: center;	
+		transition-duration: 0.4s;}
+	}
+		
+
+	@media screen and (min-width: 480px){
+	.table .btn3 {
+		position: absolute;
+		top: 85%;
+		left: 67%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		background-color: #555;
+		color: white;
+		font-size: 16px;
+		padding: 12px 24px;
+		border: none;
+		cursor: pointer;
+		border-radius: 5px;
+		text-align: center;	
+		transition-duration: 0.4s;}
+	}
+	
+	@media screen and (min-width: 600px){
+	.table .btn1 {
+		position: absolute;
+		top: 85%;
+		left: 34%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		background-color: #555;
+		color: white;
+		font-size: 16px;
+		padding: 12px 24px;
+		border: none;
+		cursor: pointer;
+		border-radius: 5px;
+		text-align: center;
+		transition-duration: 0.4s;}
+	}
+
+	@media screen and (min-width: 600px){
+	.table .btn2 {
+		position: absolute;
+		top: 85%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		background-color: #555;
+		color: white;
+		font-size: 16px;
+		padding: 12px 24px;
+		border: none;
+		cursor: pointer;
+		border-radius: 5px;
+		text-align: center;	
+		transition-duration: 0.4s;}
+	}
+		
+
+	@media screen and (min-width: 600px){
+	.table .btn3 {
+		position: absolute;
+		top: 85%;
+		left: 67%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		background-color: #555;
+		color: white;
+		font-size: 16px;
+		padding: 12px 24px;
+		border: none;
+		cursor: pointer;
+		border-radius: 5px;
+		text-align: center;	
+		transition-duration: 0.4s;}
+	}
+	
+	@media screen and (min-width: 720px){
+	.table .btn1 {
+		position: absolute;
+		top: 85%;
+		left: 35%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		background-color: #555;
+		color: white;
+		font-size: 16px;
+		padding: 12px 24px;
+		border: none;
+		cursor: pointer;
+		border-radius: 5px;
+		text-align: center;
+		transition-duration: 0.4s;}
+	}
+
+	@media screen and (min-width: 720px){
+	.table .btn2 {
+		position: absolute;
+		top: 85%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		background-color: #555;
+		color: white;
+		font-size: 16px;
+		padding: 12px 24px;
+		border: none;
+		cursor: pointer;
+		border-radius: 5px;
+		text-align: center;	
+		transition-duration: 0.4s;}
+	}
+		
+
+	@media screen and (min-width: 720px){
+	.table .btn3 {
+		position: absolute;
+		top: 85%;
+		left: 66%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		background-color: #555;
+		color: white;
+		font-size: 16px;
+		padding: 12px 24px;
+		border: none;
+		cursor: pointer;
+		border-radius: 5px;
+		text-align: center;	
+		transition-duration: 0.4s;}
+	}
+	
+	@media screen and (min-width: 840px){
+	.table .btn1 {
+		position: absolute;
+		top: 90%;
+		left: 40%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		background-color: #555;
+		color: white;
+		font-size: 16px;
+		padding: 12px 24px;
+		border: none;
+		cursor: pointer;
+		border-radius: 5px;
+		text-align: center;
+		transition-duration: 0.4s;}
+	}
+
+	@media screen and (min-width: 840px){
+	.table .btn2 {
+		position: absolute;
+		top: 90%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		background-color: #555;
+		color: white;
+		font-size: 16px;
+		padding: 12px 24px;
+		border: none;
+		cursor: pointer;
+		border-radius: 5px;
+		text-align: center;	
+		transition-duration: 0.4s;}
+	}
+		
+
+	@media screen and (min-width: 840px){
+	.table .btn3 {
+		position: absolute;
+		top: 90%;
+		left: 60%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		background-color: #555;
+		color: white;
+		font-size: 16px;
+		padding: 12px 24px;
+		border: none;
+		cursor: pointer;
+		border-radius: 5px;
+		text-align: center;	
+		transition-duration: 0.4s;}
+	}
+	
+	@media screen and (min-width: 960px){
+	.table .btn1 {
+		position: absolute;
+		top: 90%;
+		left: 41%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		background-color: #555;
+		color: white;
+		font-size: 16px;
+		padding: 12px 24px;
+		border: none;
+		cursor: pointer;
+		border-radius: 5px;
+		text-align: center;
+		transition-duration: 0.4s;}
+	}
+
+	@media screen and (min-width: 960px){
+	.table .btn2 {
+		position: absolute;
+		top: 90%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		background-color: #555;
+		color: white;
+		font-size: 16px;
+		padding: 12px 24px;
+		border: none;
+		cursor: pointer;
+		border-radius: 5px;
+		text-align: center;	
+		transition-duration: 0.4s;}
+	}
+		
+
+	@media screen and (min-width: 960px){
+	.table .btn3 {
+		position: absolute;
+		top: 90%;
+		left: 59%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		background-color: #555;
+		color: white;
+		font-size: 16px;
+		padding: 12px 24px;
+		border: none;
+		cursor: pointer;
+		border-radius: 5px;
+		text-align: center;	
+		transition-duration: 0.4s;}
+	}
+	
+		@media screen and (min-width: 1080px){
+	.table .btn1 {
+		position: absolute;
+		top: 90%;
+		left: 42%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		background-color: #555;
+		color: white;
+		font-size: 16px;
+		padding: 12px 24px;
+		border: none;
+		cursor: pointer;
+		border-radius: 5px;
+		text-align: center;
+		transition-duration: 0.4s;}
+	}
+
+	@media screen and (min-width: 1080px){
+	.table .btn2 {
+		position: absolute;
+		top: 90%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		background-color: #555;
+		color: white;
+		font-size: 16px;
+		padding: 12px 24px;
+		border: none;
+		cursor: pointer;
+		border-radius: 5px;
+		text-align: center;	
+		transition-duration: 0.4s;}
+	}
+		
+
+	@media screen and (min-width: 1080px){
+	.table .btn3 {
+		position: absolute;
+		top: 90%;
+		left: 58%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		background-color: #555;
+		color: white;
+		font-size: 16px;
+		padding: 12px 24px;
+		border: none;
+		cursor: pointer;
+		border-radius: 5px;
+		text-align: center;	
+		transition-duration: 0.4s;}
+	}
+	
+	@media screen and (min-width: 1200px){
+	.table .btn1 {
+		position: absolute;
+		top: 90%;
+		left: 43%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		background-color: #555;
+		color: white;
+		font-size: 16px;
+		padding: 12px 24px;
+		border: none;
+		cursor: pointer;
+		border-radius: 5px;
+		text-align: center;
+		transition-duration: 0.4s;}
+	}
+
+	@media screen and (min-width: 1200px){
+	.table .btn2 {
+		position: absolute;
+		top: 90%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		background-color: #555;
+		color: white;
+		font-size: 16px;
+		padding: 12px 24px;
+		border: none;
+		cursor: pointer;
+		border-radius: 5px;
+		text-align: center;	
+		transition-duration: 0.4s;}
+	}
+		
+
+	@media screen and (min-width: 1200px){
+	.table .btn3 {
+		position: absolute;
+		top: 90%;
+		left: 57%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		background-color: #555;
+		color: white;
+		font-size: 16px;
+		padding: 12px 24px;
+		border: none;
+		cursor: pointer;
+		border-radius: 5px;
+		text-align: center;	
+		transition-duration: 0.4s;}
+	}
+	
+	.table .btn1:hover {
+		background-color: black;
+	}
+	
+	.table .btn2:hover {
+		background-color: black;
+	}
+	
+	.table .btn3:hover {
+		background-color: black;
+	}
+	
 	</style>
 	
 </head>
@@ -219,16 +589,27 @@
 	
 </script>
 	
-
-	<div class= "w3-center">
-		
+	<!-- <div class="container ">
+	<img src="images/green_table.png" alt="img">
+	<button>Deal </button>
+	</div> -->
+	
+	<div class= "table">
 		<img src="images/green_table.png" class="table" />
-		<img id="myImage" src="images/blue_background.gif" class ="card">	
-		<input type="button" class="btn" value="Deal" onclick="showCard()" />
-		<input type="button" class="btn" value="Hit" onclick="hit()" />
-		<input type="button" class="btn" value="Stand" onclick="stand()" />
-		
+		<img id="myImage" src="images/blue_background.gif" class ="card" />	
+		<input type="button" class="btn1" value="Deal" onclick="showCard()" />
+		<input type="button" class="btn2" value="Hit" onclick="hit()" />
+		<input type="button" class="btn3" value="Stand" onclick="stand()" />			
 	</div>
+	
+	
+<!-- 	<div class="container">
+		<img src="images/img_snow.jpg" alt="Snow">
+		<button class="btn">Button</button>
+		<button class="button">Click Here</button>
+ 
+	</div> -->
+  
 	
 </body> 
 
